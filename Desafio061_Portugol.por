@@ -9,11 +9,12 @@ programa
 		comeca com Vogal*/
 
 		cadeia vetnomes[6],nome
-		inteiro qletras,totnomesix, totvogal
-		caracter evogal,tems
+		inteiro qletras,totnomesix, totvogal, tems
+		caracter evogal
 		
 		totnomesix = 0
 		totvogal = 0
+		tems = 0
 		
 		
 		para(inteiro pos = 0; pos < Util.numero_elementos(vetnomes); pos++){
@@ -50,10 +51,14 @@ programa
 		
 		escreva("\n")
 		escreva("\n")
-
+		
+		escreva("Pessoas com S no Nome\n")
 		para(inteiro pos = 0; pos < Util.numero_elementos(vetnomes); pos++){
-			nome = vetnomes[pos]
-			tems = Texto.
+			se(Texto.posicao_texto("S", Texto.caixa_alta(vetnomes[pos]), 0) != -1){
+				escreva("["+pos+"] = " + vetnomes[pos]+" ")
+				Util.aguarde(500)
+				tems = tems + 1
+			}
 		}
 	}
 }
@@ -62,7 +67,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1505; 
+ * @POSICAO-CURSOR = 1442; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
